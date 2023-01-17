@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer type="module"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="graph-wrapper">
+            <div id="expense-graph">
+                <p>Total Expense:</p>
+                <p>$0</p>
+                <div id="expense-bar-graph"></div>
+                <p>$5000</p>
+            </div>
+            <div id="income-graph">
+                <p>Total Income:</p>
+                <p>$0</p>
+                <div id="income-bar-graph"></div>
+                <p>$5000</p>
+            </div>    
+        </div>
+        <div id="add-expense">
+            <button id="add-new-expense">Add New Expense</button>
+                <div id="table2-wrapper">
+                    <div class="new-expense-wrapper">
+                        <div class="new-expense-column">
+                            <label for="item">Item</label>
+                            <input type="text" id="item">
+                            <label for="day-of-month">Day of Month Due</label>
+                            <input type="text" id="day-of-month">
+                        </div>
+                        <div class="new-expense-column-number">
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount">
+                            <label for="balance">Balance</label>
+                            <input type="number" id="balance">
+                        </div>
+                        <div class="new-expense-column">
+                            <label for="type">Type</label>
+                            <select name="type" id="type">
+                                <option value="Expense">Expense</option>
+                                <option value="Income">Income</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="expense-total-wrapper">
+                        <div class="expense-labels">
+                            <p>Total Income:</p>
+                            <p>Total Expenses:</p>
+                            <p>Remaining Balance:</p>
+                        </div>
+                        <div class="expense-totals">
+                            <p id="income-total">0</p>
+                            <p id="expense-total">0</p>
+                            <p id="remaining-total">0</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+    </div>
+</body>
+</html>

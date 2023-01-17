@@ -19,7 +19,7 @@
     width: 60vw;
     height:15vh;
     margin: 0 auto;
-    margin-top: 10vh;
+    margin-top: 2vh;
 }
 
 /* expense graph */
@@ -62,7 +62,7 @@
     border: 3px solid rgb(152, 152, 241);
     border-radius: 5px;
     width: 60vw;
-    height: 30vh;
+    height: 25vh;
     margin-top: 5px;
 }
 
@@ -96,6 +96,7 @@
 .new-expense-column input[type='text'] {
     font-size: 1.1em;
     padding: 2px;
+    border-radius: 5px;
     
 }
 
@@ -131,3 +132,55 @@
     gap: 5px;
 }
 
+#table-wrapper {
+    /* border: 3px solid rgb(152, 152, 241); */
+    border-radius: 5px;
+    width: 60vw;
+    height: 45vh;
+    margin-top: 40px;
+}
+
+table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table,th,td {
+    border: 2px solid rgb(152, 152, 241);
+    border-radius: 5px;
+}
+
+table td:nth-child(1) {
+    /* border: 1px solid blue; */
+    width: 250px;
+}
+
+table td:nth-child(2) {
+    /* border: 1px solid rgb(42, 42, 67); */
+    width: 100px;
+}
+
+table td:nth-child(3) {
+    /* border: 1px solid rgb(36, 151, 71); */
+    width: 100px;
+}
+
+table td:nth-child(4) {
+    /* border: 1px solid rgb(219, 208, 45); */
+    width: 175px;
+}
+
+table td:nth-child(5) {
+    /* border: 1px solid rgb(19, 120, 121); */
+    width: 175px;
+}
+
+
+table th {
+    font-size: 1.6em;
+}
+
+td {
+    font-size: 1.4em;
+}

@@ -1,10 +1,3 @@
-//get
-
-export const getData = 'https://x8ki-letl-twmt.n7.xano.io/api:IowF6OTv/expense'
-fetch(getData)
-.then((res) => res.json())
-.then((data) => console.log(data))
-
 
 //post
 

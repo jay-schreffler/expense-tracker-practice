@@ -1,6 +1,4 @@
-
-
-export const addNewExpense = (item,type,day,amount,balance) => {
+export const addNewExpenseToTable = (item,type,day,amount,balance) => {
     const addRow = table.insertRow(-1);
     const addItem = addRow.insertCell(0);   
     const addType = addRow.insertCell(1);   

@@ -24,7 +24,7 @@ const table = document.querySelector('#table');
 //data arrays
 
 const expenseArray = [];
-const incomeAttay = [];
+const incomeArray = [];
 
 // ---------------------------------------------------------------------------------------------------------------------
 //v1 add expense items to table - no array/object
@@ -65,9 +65,23 @@ const loadTable = ()=> {
     .then((data) => {
         for(let i = 0; i < data.length; i++) {
             addNewExpenseToTable(`${data[i].item}`,`${data[i].type}`,`${data[i].date}`,`$${data[i].amount}`,`$${data[i].balance}`)
+            if(data[i].type === 'Expense') {
+            expenseArray.push(data[i].amount);
+            } else if(data[i].type === 'Income') {
+            incomeArray.push(data[i].amount);
+            }
         }
+        const expenseTotals = expenseArray.reduce((acc,value) => {
+            return acc + value;
+        })
+        totalExpenseDisplay.textContent = `$${expenseTotals}`;
+        const incomeTotals = incomeArray.reduce((acc,value) => {
+            return acc + value;
+        })
+        totalIncomeDisplay.textContent = `$${incomeTotals}`
+        const balanceTotals = incomeTotals - expenseTotals;
+        remainingBalanceDisplay.textContent = `$${balanceTotals}`;
     })
-
 }
 
 loadTable();
